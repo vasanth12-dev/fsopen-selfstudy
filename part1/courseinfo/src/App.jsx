@@ -1,19 +1,53 @@
-import Course from "./components/Course";
+import Note from './components/Note'
+import { use, useState } from 'react'
+import PhoneBook from './components/PhoneBook';
+const App = (props) => {
+  // const [notes,setNotes] = useState(props.notes);
+  // const [note,setNote] = useState('a new note');
+  // const [showAll,setShowAll] = useState(true);
 
-const App = () => {
-  const course = {
-    id: 1,
-    name: 'Half Stack application development',
-    parts: [
-      { id: 1, name: 'Fundamentals of React', exercises: 10 },
-      { id: 2, name: 'Using props to pass data', exercises: 7 },
-      { id: 3, name: 'State of a component', exercises: 14 },
-    ],
-  }
+  // const addNote = (event) => {
+  //   event.preventDefault();
+  //   const noteObject = {
+  //     content : note,
+  //     import : Math.random() < 0.5,
+  //     id : String(notes.length+1)
+  //   }
 
+  //   console.log(noteObject);
+
+  //   setNotes(notes.concat(noteObject));
+  //   setNote('');
+  // }
+
+  // const handleChange = (event) => {
+    
+  //   setNote(event.target.value);
+  // }
+
+  // const noteShow = showAll ? notes : notes.filter(note => note.important === true)
+
+  // return (
+  //   <div>
+  //     <h1>Notes</h1>
+  //     <button onClick={() => setShowAll(!showAll)}>show {showAll ? 'important' : 'all'}</button>
+
+
+  //     <ul>
+  //       {noteShow.map((note) => (
+  //         <Note key={note.id} note={note} />
+  //       ))}
+  //     </ul>
+
+
+  //     <form onSubmit={addNote}>
+  //       <input value={note} onChange={handleChange}/>
+  //       <button type='submit'>save</button>
+  //     </form>
+  //   </div>
   return(
     <>
-      <Course course={course}/>
+      <PhoneBook />
     </>
   )
 }
